@@ -154,3 +154,33 @@ simply click on services and click on EC2.
 Amazon has a number of categories for their cloud services, and the Kali machine 
 that we created falls under the EC2 category. Therefore, all you have to do is 
 click in here and you will end up in this page where you can see it and manage it.
+
+## Connecting to Kali Image over SSH
+
+Now that we have the Kali machine installed and it's running on the cloud, let's 
+go ahead and see how we can connect to it, control it, and maybe hack some 
+computers. As mentioned previously, we're going to use a program called SSH to 
+connect from our local computer to the remote Kali machine and control it.
+
+Now SSH is a command line program, which means that we can only use it to control 
+the cloud computer using the system commands. We are limited to this at the 
+moment because we just installed our cloud computer, and it actually does not 
+have a graphical user interface.
+
+I will show you how to install a graphical user interface on it in the future, 
+but for now we're going to have to use it using SSH. And we're actually going 
+to communicate with this computer using SSH often because it is actually much
+quicker and faster.
+
+So you're going to get very comfortable with the command line as we go through 
+the course. So first of all, before we can use SSH we're going to have to change 
+the permissions of the key file that we downloaded so that it can be used with 
+SSH in order to authenticate us with our cloud computer.
+
+```shell
+chmod 700 /Users/john/Downloads/Kali-keypair.pem
+ssh -i /Users/john/Downloads/Kali-keypair.pem kali@3.15.236.163
+```
+
+https://www.mediacollege.com/linux/command/linux-command.html  
+https://explainshell.com/  
